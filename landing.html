@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #333333; /* Dark Charcoal */
+            --primary-color-dark: #222222; /* Darker Charcoal */
+            --secondary-color: #E2725B; /* Bright Yellow */
+            --accent-color: #FFC107; /* Amber */
+            --white: #FFFFFF;
+            --background-color: #D9EAD3; /* Pastel Olive Green */
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            overflow-x: hidden;
+            color: var(--primary-color-dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .header__container {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .header__content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        nav {
+            padding: 1rem 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .nav_logo a {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color-dark);
+            background-color: var(--accent-color);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+        
+        .nav_links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .link a {
+            position: relative;
+            padding-bottom: 5px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .link a::after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: 0.3s;
+        }
+        
+        .link a:hover::after {
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        h2 {
+            margin-bottom: auto;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        
+        h3 {
+            margin-bottom: auto;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color-dark);
+        }
+        
+        .banner_1 {
+            max-width: 400px;
+            margin: 2rem 0;
+            padding: 2rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color-dark);
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 3rem;
+            outline: none;
+            border: none;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            background-color: var(--secondary-color);
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent-color);
+        }
+        
+        .header_image {
+            flex: 1;
+            background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4') no-repeat center center/cover;
+        }
+        
+        .types_container {
+            background-color: var(--primary-color-dark);
+            padding: 2rem 0;
+        }
+        
+        .types_grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .types_card {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .types_card h4 {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .types_card p {
+            padding-bottom: 1rem;
+            color: var (--primary-color-dark);
+            border-bottom: 2px solid var(--secondary-color);
+        }
+    </style>
+    <title>Cafe Delight</title>
+</head>
+<body>
+    <header class="header__container">
+        <div class="header__content">
+            <nav>
+                <div class="nav_logo">
+                    <a href="#">Cafe Delight</a>
+                </div>
+                <ul class="nav_links">
+                    <li class="link"><a href="#">Home</a></li>
+                    <li class="link"><a href="#">Menu</a></li>
+                    <li class="link"><a href="#">About Us</a></li>
+                    <li class="link"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h1>RELAX.</h1>
+                <h2>SIP.</h2>
+                <h3>ENJOY.</h3>
+                <div class="banner_1">
+                    Welcome to your cozy corner.
+                </div>
+                <button class="btn">Visit Us</button>
+            </div>
+        </div>
+        <div class="header_image"></div>
+    </header>
+    <section class="types_container">
+        <div class="types_grid">
+            <div class="types_card">
+                <h4>1.</h4>
+                <p>
+                    Enjoy our finest selection of freshly brewed coffees and delicious pastries.
+                </p>
+            </div>
+            <div class="types_card">
+                <h4>2.</h4>
+                <p>
+                    Our cozy ambiance is perfect for a relaxed gathering or a productive work session.
+                </p>
+            </div>
+            <div class="types_card">
+                <h4>3.</h4>
+                <p>
+                    We source our coffee beans from the best farms around the world to ensure top quality.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
